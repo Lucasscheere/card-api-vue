@@ -1,18 +1,14 @@
 <template>
-  <div class="body">
-    <div v-if="info" class="card">
-      <header class="header">
-        {{ info.title }}
-      </header>
-      <div class="description" v-html="info.description"></div>
-    </div>
+  <div v-if="info" class="card">
+    <header class="header">{{ info.title }}</header>
+    <div class="description" v-html="info.description"></div>
   </div>
 </template>
 
 <script>
 import axios from "axios";
 
-let cursoMostrado = 3;
+let cursoMostrado = 1;
 
 export default {
   name: "App",
@@ -31,13 +27,11 @@ export default {
 </script>
 
 <style>
-body {
-  font-family: sans-serif;
-}
 .card {
   border: 1px solid;
   display: flex;
   flex-direction: column;
+  font-family: Roboto, sans-serif;
 }
 header {
   background-color: blueviolet;
